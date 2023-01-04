@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="smartanalytics.iframe">
+        <iframe t-if="url"
+                t-att-src="url"
+                height="100%"
+                width="100%"
+                marginwidth="0"
+                marginheight="0"
+                frameborder="0"/>
+        <div t-else="">No Url</div>
+    </t>
+
+    <t t-name="smart_analytics.CustomKanbanView" t-inherit="web.KanbanView" owl="1">
+         <xpath expr="." position="inside">
+        <link rel="stylesheet" href="/dashboard_frame/static/src/smart_analytic.css"/>
+    </xpath>
+    </t>
+
+</templates>
